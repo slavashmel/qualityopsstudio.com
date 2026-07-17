@@ -67,6 +67,17 @@ test("detects the preferred locale at the root route", async () => {
   assert.equal(new URL(response.headers.get("location")).pathname, "/ru");
 });
 
+test("preserves https redirects behind the production proxy", async () => {
+  const response = await render("/", {
+    "accept-language": "sr-RS,sr;q=0.9,en;q=0.8",
+    host: "qualityopsstudio.com",
+    "x-forwarded-proto": "https",
+  });
+
+  assert.equal(response.status, 307);
+  assert.equal(response.headers.get("location"), "https://qualityopsstudio.com/sr");
+});
+
 test("keeps i18n structure explicit in source", async () => {
   const [rootPage, localePage, i18n] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
