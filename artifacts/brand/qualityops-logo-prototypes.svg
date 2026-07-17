@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1280" viewBox="0 0 1800 1280" fill="none">
+  <rect width="1800" height="1280" fill="#F6F2EA"/>
+  <style>
+    .title { font: 800 48px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .subtitle { font: 500 21px Inter, Arial, sans-serif; fill: #687064; letter-spacing: 0; }
+    .label { font: 750 18px Inter, Arial, sans-serif; fill: #B94C2D; letter-spacing: .08em; }
+    .word { font: 820 42px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .word-light { font: 540 42px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .studio { font: 680 17px Inter, Arial, sans-serif; fill: #687064; letter-spacing: .18em; }
+    .tag { font: 510 18px Inter, Arial, sans-serif; fill: #687064; letter-spacing: 0; }
+    .small { font: 540 15px Inter, Arial, sans-serif; fill: #687064; letter-spacing: 0; }
+    .panel { fill: #FFFAF0; stroke: #D9D1C2; stroke-width: 2; rx: 18; }
+    .dark-panel { fill: #202A25; rx: 18; }
+    .ink { stroke: #171A16; }
+    .muted-stroke { stroke: #687064; }
+    .accent { stroke: #B94C2D; }
+    .green { stroke: #587060; }
+    .gold { stroke: #C28D36; }
+  </style>
+
+  <text x="80" y="94" class="title">QualityOps Studio Logo Prototypes</text>
+  <text x="80" y="132" class="subtitle">Early vector directions for a boutique quality operations consulting brand</text>
+
+  <!-- 1 -->
+  <rect class="panel" x="80" y="190" width="520" height="270" rx="18"/>
+  <text x="118" y="238" class="label">01 PREMIUM WORDMARK</text>
+  <text x="118" y="315" class="word-light">Quality</text>
+  <text x="287" y="315" class="word">Ops</text>
+  <text x="382" y="315" class="studio">STUDIO</text>
+  <line x1="118" y1="349" x2="472" y2="349" stroke="#D9D1C2" stroke-width="2"/>
+  <circle cx="500" cy="349" r="6" fill="#B94C2D"/>
+  <text x="118" y="391" class="tag">Quality systems for predictable delivery.</text>
+
+  <!-- 2 -->
+  <rect class="panel" x="640" y="190" width="520" height="270" rx="18"/>
+  <text x="678" y="238" class="label">02 SYSTEM MARK</text>
+  <g transform="translate(686 282)">
+    <rect x="0" y="0" width="88" height="88" rx="14" stroke="#171A16" stroke-width="8"/>
+    <circle cx="0" cy="0" r="12" fill="#B94C2D"/>
+    <circle cx="88" cy="0" r="12" fill="#587060"/>
+    <circle cx="0" cy="88" r="12" fill="#587060"/>
+    <circle cx="88" cy="88" r="12" fill="#C28D36"/>
+    <line x1="18" y1="18" x2="70" y2="70" stroke="#171A16" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <text x="805" y="325" class="word-light">Quality</text>
+  <text x="974" y="325" class="word">Ops</text>
+  <text x="805" y="361" class="studio">STUDIO</text>
+  <text x="678" y="414" class="small">Best for favicon, proposals, LinkedIn avatar, and a sober consulting feel.</text>
+
+  <!-- 3 -->
+  <rect class="panel" x="1200" y="190" width="520" height="270" rx="18"/>
+  <text x="1238" y="238" class="label">03 QOS MONOGRAM</text>
+  <g transform="translate(1242 282)">
+    <circle cx="58" cy="58" r="48" stroke="#171A16" stroke-width="10"/>
+    <path d="M92 92L122 122" stroke="#B94C2D" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="58" cy="58" r="10" fill="#C28D36"/>
+    <path d="M156 30H214C236 30 250 43 250 61C250 80 236 92 214 92H186C164 92 150 105 150 123C150 142 164 154 186 154H250" stroke="#171A16" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="1238" y="414" class="small">More brandable and distinctive, but slightly less immediate than the system mark.</text>
+
+  <!-- 4 -->
+  <rect class="dark-panel" x="80" y="510" width="520" height="270" rx="18"/>
+  <text x="118" y="558" class="label">04 RELEASE SIGNAL</text>
+  <g transform="translate(118 615)">
+    <path d="M0 12H74" stroke="#8A9288" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 52H120" stroke="#8A9288" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 92H52" stroke="#8A9288" stroke-width="8" stroke-linecap="round"/>
+    <path d="M168 12H354" stroke="#C28D36" stroke-width="8" stroke-linecap="round"/>
+    <path d="M168 52H354" stroke="#B94C2D" stroke-width="8" stroke-linecap="round"/>
+    <path d="M168 92H354" stroke="#587060" stroke-width="8" stroke-linecap="round"/>
+    <path d="M126 52C143 52 150 12 168 12" stroke="#FFFAF0" stroke-width="6" stroke-linecap="round"/>
+    <path d="M126 52H168" stroke="#FFFAF0" stroke-width="6" stroke-linecap="round"/>
+    <path d="M52 92C106 92 114 52 168 52" stroke="#FFFAF0" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <text x="118" y="748" fill="#FFFAF0" class="word-light">Quality</text>
+  <text x="287" y="748" fill="#FFFAF0" class="word">Ops</text>
+  <text x="382" y="748" fill="#C9D0C8" class="studio">STUDIO</text>
+
+  <!-- 5 -->
+  <rect class="panel" x="640" y="510" width="520" height="270" rx="18"/>
+  <text x="678" y="558" class="label">05 OPERATING LOOP</text>
+  <g transform="translate(702 618)">
+    <path d="M78 0H166C209 0 244 35 244 78C244 121 209 156 166 156H78C35 156 0 121 0 78C0 35 35 0 78 0Z" stroke="#171A16" stroke-width="9"/>
+    <path d="M122 0H166C209 0 244 35 244 78" stroke="#B94C2D" stroke-width="11" stroke-linecap="round"/>
+    <path d="M244 78C244 121 209 156 166 156H122" stroke="#587060" stroke-width="11" stroke-linecap="round"/>
+    <path d="M122 156H78C35 156 0 121 0 78" stroke="#C28D36" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="122" cy="78" r="16" fill="#171A16"/>
+  </g>
+  <text x="678" y="730" class="word-light">Quality</text>
+  <text x="847" y="730" class="word">Ops</text>
+  <text x="942" y="730" class="studio">STUDIO</text>
+
+  <!-- 6 -->
+  <rect class="panel" x="1200" y="510" width="520" height="270" rx="18"/>
+  <text x="1238" y="558" class="label">06 ADVISORY LOCKUP</text>
+  <g transform="translate(1240 614)">
+    <rect x="0" y="0" width="86" height="86" rx="10" fill="#202A25"/>
+    <path d="M22 44H64" stroke="#FFFAF0" stroke-width="7" stroke-linecap="round"/>
+    <path d="M44 22V64" stroke="#FFFAF0" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="44" cy="44" r="12" fill="#B94C2D"/>
+  </g>
+  <text x="1354" y="646" class="word-light">QualityOps</text>
+  <text x="1354" y="684" class="studio">STUDIO</text>
+  <text x="1238" y="742" class="tag">Release confidence advisory for scaling teams.</text>
+
+  <text x="80" y="860" class="title">Quick Read</text>
+  <text x="80" y="910" class="subtitle">01 feels most premium. 02 is the strongest practical identity. 03 is most brandable. 04 is best for the release-confidence story. 05 is the clearest “operating system” metaphor. 06 is closest to advisory/consulting.</text>
+
+  <rect x="80" y="980" width="1640" height="170" rx="18" fill="#202A25"/>
+  <text x="124" y="1048" fill="#FFFAF0" class="word-light">Recommended direction:</text>
+  <text x="572" y="1048" fill="#FFFAF0" class="word">02 System Mark + 01 Premium Wordmark</text>
+  <text x="124" y="1096" fill="#C9D0C8" class="tag">Use the system mark as favicon/avatar; use the wordmark for the website header and proposals.</text>
+</svg>
