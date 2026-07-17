@@ -2,9 +2,6 @@
 set -euo pipefail
 
 APP_DIR="/opt/qualityopsstudio.com/app"
-SSH_KEY="/opt/qualityopsstudio.com/secrets/github_deploy_ed25519"
-KNOWN_HOSTS="/opt/qualityopsstudio.com/secrets/github_known_hosts"
-export GIT_SSH_COMMAND="ssh -i $SSH_KEY -o UserKnownHostsFile=$KNOWN_HOSTS -o StrictHostKeyChecking=yes -o IdentitiesOnly=yes"
 
 cd "$APP_DIR"
 
