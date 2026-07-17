@@ -3,6 +3,7 @@ set -euo pipefail
 
 APP_DIR="/opt/qualityopsstudio.com/app"
 
+git config --global --add safe.directory "$APP_DIR" >/dev/null 2>&1 || true
 cd "$APP_DIR"
 
 git fetch origin main
