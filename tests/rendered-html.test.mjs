@@ -1,20 +1,18 @@
 import assert from "node:assert/strict";
-import { access, readFile, readdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const developmentPreviewMeta =
-  /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
-const templateRoot = new URL("../", import.meta.url);
-const previewRoot = new URL("../app/_sites-preview/", import.meta.url);
-
-async function render() {
+async function render(path = "/", headers = {}) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
+  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${path}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", {
-      headers: { accept: "text/html" },
+    new Request(`http://localhost${path}`, {
+      headers: {
+        accept: "text/html",
+        ...headers,
+      },
     }),
     {
       ASSETS: {
@@ -28,64 +26,59 @@ async function render() {
   );
 }
 
-test("server-renders the starter loading skeleton", async () => {
-  const response = await render();
+test("renders the English default locale page", async () => {
+  const response = await render("/en");
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, developmentPreviewMeta);
-  assert.match(html, /<title>Your site is taking shape<\/title>/i);
-  assert.match(html, /Building your site/);
-  assert.match(html, /Your site is taking shape/);
-  assert.match(
-    html,
-    /Your first version will appear here automatically when it’s ready\./,
-  );
-  assert.doesNotMatch(html, /Codex/);
-  assert.match(html, /react-loading-skeleton/);
-  assert.match(html, /role="status"/);
+  assert.match(html, /Quality systems for predictable delivery/);
+  assert.match(html, /Turn QA bottlenecks into operating systems/);
+  assert.match(html, /Quality System Diagnostic/);
+  assert.match(html, />EN</);
+  assert.match(html, />RU</);
+  assert.match(html, />SR</);
 });
 
-test("keeps the loading skeleton scoped and disposable", async () => {
-  const [preview, css, page, layout, packageJson, files] = await Promise.all([
-    readFile(new URL("SkeletonPreview.tsx", previewRoot), "utf8"),
-    readFile(new URL("preview.css", previewRoot), "utf8"),
-    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
-    readFile(new URL("../package.json", import.meta.url), "utf8"),
-    readdir(previewRoot),
+test("renders Russian and Serbian locale pages", async () => {
+  const [ruResponse, srResponse] = await Promise.all([
+    render("/ru"),
+    render("/sr"),
   ]);
 
-  assert.deepEqual(files.sort(), ["SkeletonPreview.tsx", "preview.css"]);
-  assert.match(preview, /from "react-loading-skeleton"/);
-  assert.match(preview, /baseColor="#eceae7"/);
-  assert.match(preview, /highlightColor="#f9f8f6"/);
-  assert.match(preview, /duration=\{2\.8\}/);
-  assert.match(preview, /sites-skeleton-search-placeholder/);
-  assert.match(packageJson, /"react-loading-skeleton": "3\.5\.0"/);
+  assert.equal(ruResponse.status, 200);
+  assert.equal(srResponse.status, 200);
 
-  const shellIndex = preview.indexOf('className="sites-skeleton-shell"');
-  const statusIndex = preview.indexOf('className="sites-skeleton-status"');
-  assert.ok(shellIndex >= 0 && statusIndex > shellIndex);
-  assert.match(css, /position:\s*fixed/);
-  assert.match(css, /inset:\s*0/);
-  assert.match(css, /opacity:\s*0\.52/);
-  assert.match(css, /prefers-reduced-motion:\s*reduce/);
-  assert.doesNotMatch(css, /#020617|canvas|pets|progress/i);
-  assert.doesNotMatch(
-    preview,
-    /loading-spinner|status-mark|status-progress|canvas|cookie|random/i,
-  );
+  const ruHtml = await ruResponse.text();
+  const srHtml = await srResponse.text();
 
-  assert.match(page, /export const metadata:\s*Metadata/);
-  assert.match(page, /"codex-preview": "development"/);
-  assert.match(page, /<SkeletonPreview \/>/);
-  assert.match(layout, /title:\s*"Starter Project"/);
-  assert.doesNotMatch(layout, /codex-preview|_sites-preview|themeColor|\bViewport\b/);
-  assert.doesNotMatch(css, /(^|\s)(html|body)\s*\{/m);
+  assert.match(ruHtml, /Системы качества для предсказуемых релизов/);
+  assert.match(ruHtml, /Запланировать диагностику/);
+  assert.match(srHtml, /Sistemi kvaliteta za predvidive isporuke/);
+  assert.match(srHtml, /Zakažite dijagnostiku/);
+});
 
-  await assert.rejects(
-    access(new URL("public/_sites-preview", templateRoot)),
-  );
+test("detects the preferred locale at the root route", async () => {
+  const response = await render("/", {
+    "accept-language": "ru-RU,ru;q=0.9,en;q=0.8",
+  });
+
+  assert.equal(response.status, 307);
+  assert.equal(new URL(response.headers.get("location")).pathname, "/ru");
+});
+
+test("keeps i18n structure explicit in source", async () => {
+  const [rootPage, localePage, i18n] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/[locale]/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/i18n.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(rootPage, /accept-language/);
+  assert.match(rootPage, /NEXT_LOCALE/);
+  assert.match(localePage, /generateStaticParams/);
+  assert.match(localePage, /LanguageSwitcher/);
+  assert.match(i18n, /defaultLocale: Locale = "en"/);
+  assert.match(i18n, /"ru"/);
+  assert.match(i18n, /"sr"/);
 });
