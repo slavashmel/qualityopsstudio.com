@@ -8,7 +8,7 @@ WorkingDirectory=/opt/qualityopsstudio.com/app
 Environment=NODE_ENV=production
 Environment=PORT=3108
 Environment=WRANGLER_LOG_PATH=.wrangler/wrangler.log
-ExecStart=/usr/bin/npm run start
+ExecStart=/usr/bin/npm run start -- --hostname 127.0.0.1
 Restart=always
 RestartSec=5
 User=qualityops
