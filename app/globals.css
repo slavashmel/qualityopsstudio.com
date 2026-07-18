@@ -85,7 +85,7 @@ main {
   width: 34px;
   height: 34px;
   border-radius: 7px;
-  background: var(--panel-strong);
+  background: #fffaf0;
 }
 
 .brand-cross,
@@ -104,7 +104,7 @@ main {
   position: absolute;
   inset: 50% auto auto 50%;
   border-radius: 999px;
-  background: #fffaf0;
+  background: var(--panel-strong);
   content: "";
   transform: translate(-50%, -50%);
 }
