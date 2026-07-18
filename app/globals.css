@@ -84,48 +84,28 @@ main {
   display: inline-block;
   width: 34px;
   height: 34px;
+  border: 1px solid rgba(255, 250, 240, 0.2);
   border-radius: 7px;
-  background: #fffaf0;
-}
-
-.brand-cross,
-.brand-dot {
-  position: absolute;
-  display: block;
-  border-radius: 999px;
-}
-
-.brand-cross {
-  inset: 8px;
-}
-
-.brand-cross::before,
-.brand-cross::after {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  border-radius: 999px;
   background: var(--panel-strong);
-  content: "";
-  transform: translate(-50%, -50%);
 }
 
-.brand-cross::before {
-  width: 18px;
-  height: 5px;
+.brand-pulse {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.brand-cross::after {
-  width: 5px;
-  height: 18px;
+.brand-pulse path {
+  fill: none;
+  stroke: #fffaf0;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 6.8;
 }
 
-.brand-dot {
-  top: 50%;
-  left: 50%;
-  width: 9px;
-  height: 9px;
-  background: var(--accent);
-  transform: translate(-50%, -50%);
+.brand-pulse circle {
+  fill: var(--gold);
 }
 
 .nav-links {

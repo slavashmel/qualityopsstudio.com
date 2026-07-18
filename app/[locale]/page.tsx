@@ -69,8 +69,10 @@ export default async function LocaleHome({ params }: LocalePageProps) {
         <nav className="top-nav" aria-label={dictionary.nav.aria}>
           <a className="brand" href="#top" aria-label={dictionary.nav.home}>
             <span className="brand-mark" aria-hidden="true">
-              <span className="brand-cross" />
-              <span className="brand-dot" />
+              <svg className="brand-pulse" viewBox="0 0 64 64" focusable="false">
+                <path d="M13 32H25L31 21L40 43L47 32H54" />
+                <circle cx="54" cy="32" r="5.5" />
+              </svg>
             </span>
             <span>
               QualityOps <em>Studio</em>
