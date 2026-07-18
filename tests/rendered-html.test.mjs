@@ -35,6 +35,9 @@ test("renders the English default locale page", async () => {
   assert.match(html, /Quality systems for predictable delivery/);
   assert.match(html, /Turn QA bottlenecks into operating systems/);
   assert.match(html, /Quality System Diagnostic/);
+  assert.match(html, /What gets diagnosed/);
+  assert.match(html, /Autotest Audit/);
+  assert.match(html, /TMS Implementation and Migration/);
   assert.match(html, />EN</);
   assert.match(html, />RU</);
   assert.match(html, />SR</);
@@ -54,8 +57,10 @@ test("renders Russian and Serbian locale pages", async () => {
 
   assert.match(ruHtml, /Системы качества для предсказуемых релизов/);
   assert.match(ruHtml, /Запланировать диагностику/);
+  assert.match(ruHtml, /Аудит автотестов/);
   assert.match(srHtml, /Sistemi kvaliteta za predvidive isporuke/);
   assert.match(srHtml, /Zakažite dijagnostiku/);
+  assert.match(srHtml, /Autotest Audit/);
 });
 
 test("detects the preferred locale at the root route", async () => {

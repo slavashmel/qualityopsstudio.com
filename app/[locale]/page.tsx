@@ -82,6 +82,7 @@ export default async function LocaleHome({ params }: LocalePageProps) {
             <div className="nav-links">
               <a href="#offers">{dictionary.nav.offers}</a>
               <a href="#method">{dictionary.nav.method}</a>
+              <a href="#modules">{dictionary.nav.modules}</a>
               <a href="#plan">{dictionary.nav.plan}</a>
             </div>
             <LanguageSwitcher
@@ -125,6 +126,42 @@ export default async function LocaleHome({ params }: LocalePageProps) {
             <span>{item.label}</span>
           </div>
         ))}
+      </section>
+
+      <section className="section system-map-section">
+        <div className="section-heading">
+          <p className="section-kicker">{dictionary.systemMap.kicker}</p>
+          <h2>{dictionary.systemMap.title}</h2>
+          <p>{dictionary.systemMap.text}</p>
+        </div>
+        <div className="system-map">
+          {dictionary.systemMap.nodes.map((node, index) => (
+            <article className="system-node" key={node.title}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{node.title}</h3>
+              <p>{node.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section case-section">
+        <div className="section-heading">
+          <p className="section-kicker">{dictionary.cases.kicker}</p>
+          <h2>{dictionary.cases.title}</h2>
+        </div>
+        <div className="case-grid">
+          {dictionary.cases.items.map((item) => (
+            <article className="case-card" key={item.title}>
+              <strong>{item.metric}</strong>
+              <h3>{item.title}</h3>
+              <p>{item.symptom}</p>
+              <p>{item.intervention}</p>
+              <p>{item.result}</p>
+              <footer>{item.leadership}</footer>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section two-column">
@@ -174,6 +211,22 @@ export default async function LocaleHome({ params }: LocalePageProps) {
         </div>
       </section>
 
+      <section className="section module-section" id="modules">
+        <div className="section-heading">
+          <p className="section-kicker">{dictionary.modules.kicker}</p>
+          <h2>{dictionary.modules.title}</h2>
+          <p>{dictionary.modules.text}</p>
+        </div>
+        <div className="module-grid">
+          {dictionary.modules.items.map((module) => (
+            <article className="module-card" key={module.title}>
+              <h3>{module.title}</h3>
+              <p>{module.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section method-section" id="method">
         <div className="section-heading">
           <p className="section-kicker">{dictionary.method.kicker}</p>
@@ -189,6 +242,31 @@ export default async function LocaleHome({ params }: LocalePageProps) {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section fit-section">
+        <div>
+          <p className="section-kicker">{dictionary.fit.kicker}</p>
+          <h2>{dictionary.fit.title}</h2>
+        </div>
+        <div className="fit-grid">
+          <article className="fit-card good-fit">
+            <h3>{dictionary.fit.goodTitle}</h3>
+            <ul>
+              {dictionary.fit.good.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+          <article className="fit-card">
+            <h3>{dictionary.fit.badTitle}</h3>
+            <ul>
+              {dictionary.fit.bad.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
         </div>
       </section>
 

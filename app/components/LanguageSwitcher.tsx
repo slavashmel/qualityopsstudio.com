@@ -8,12 +8,16 @@ type LanguageSwitcherProps = {
   label: string;
 };
 
+function rememberLocale(locale: Locale) {
+  document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000; SameSite=Lax`;
+}
+
 export function LanguageSwitcher({ currentLocale, label }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const router = useRouter();
 
   function switchLocale(nextLocale: Locale) {
-    document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    rememberLocale(nextLocale);
 
     const segments = pathname.split("/");
     if (locales.includes(segments[1] as Locale)) {

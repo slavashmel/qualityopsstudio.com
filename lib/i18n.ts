@@ -59,6 +59,7 @@ export const dictionaries = {
       home: "QualityOps Studio home",
       offers: "Offers",
       method: "Method",
+      modules: "Modules",
       plan: "Plan",
       language: "Language",
     },
@@ -98,6 +99,80 @@ export const dictionaries = {
           "Onboarding ramp-up improvement through a cross-functional onboarding system.",
       },
     ],
+    systemMap: {
+      kicker: "What gets diagnosed",
+      title:
+        "Quality failures rarely come from one test suite. They come from the system around it.",
+      text:
+        "The diagnostic follows how quality actually moves through the organization, from requirements and dependencies to release decisions and ownership.",
+      nodes: [
+        {
+          title: "Requirements signal",
+          text: "Acceptance criteria, risk, product context, and hidden assumptions.",
+        },
+        {
+          title: "Jira and dependencies",
+          text: "Cross-team changes, blockers, workflow gaps, and missed handoffs.",
+        },
+        {
+          title: "Regression model",
+          text: "Coverage, prioritization, execution time, flaky areas, and release scope.",
+        },
+        {
+          title: "Automation signal",
+          text: "Trust, maintenance cost, reporting, ownership, and false confidence.",
+        },
+        {
+          title: "CI/CD and environments",
+          text: "Pipelines, test data, infrastructure, observability, and feedback loops.",
+        },
+        {
+          title: "Release ownership",
+          text: "Who decides what is ready, what is risky, and what improves next.",
+        },
+      ],
+    },
+    cases: {
+      kicker: "Evidence",
+      title: "Concrete results, translated into operating lessons.",
+      items: [
+        {
+          metric: "10h -> 30m",
+          title: "Regression became a release signal",
+          symptom: "Cross-team regression was too slow for confident frequent releases.",
+          intervention:
+            "Automation triage, prioritization, CI/CD improvements, test data work, and ownership changes.",
+          result:
+            "Regression time reduced from 10 hours to 30 minutes.",
+          leadership:
+            "Leadership gets a faster and more reliable answer to the question: can we release?",
+        },
+        {
+          metric: "-50%",
+          title: "Automation became more economical",
+          symptom:
+            "Automation was useful, but expensive to run, maintain, and trust.",
+          intervention:
+            "Suite review, coverage cleanup, execution optimization, and governance around what should be automated.",
+          result:
+            "QA automation costs reduced by about 50% while improving coverage and execution performance.",
+          leadership:
+            "Automation becomes an investment with signal, not a growing maintenance tax.",
+        },
+        {
+          metric: "1-2 weeks",
+          title: "Onboarding became part of the quality system",
+          symptom:
+            "New people needed too much informal help to become productive across QA, engineering, product, and project work.",
+          intervention:
+            "Cross-functional onboarding flow, documentation, expectations, and review rhythm.",
+          result:
+            "Ramp-up time reduced by 1-2 weeks.",
+          leadership:
+            "Team growth becomes less dependent on hidden knowledge and individual availability.",
+        },
+      ],
+    },
     positioning: {
       kicker: "Positioning",
       title: "Not outsourced testing. Not a generic automation vendor.",
@@ -160,9 +235,37 @@ export const dictionaries = {
         },
       ],
     },
+    modules: {
+      kicker: "Specialist modules",
+      title: "Focused work when the bottleneck is already visible.",
+      text:
+        "These modules can be bought independently or attached to a diagnostic, rescue sprint, or fractional leadership engagement.",
+      items: [
+        {
+          title: "Autotest Audit",
+          text:
+            "Audit of automated tests on any stack: architecture, coverage, flakiness, maintainability, execution cost, reporting, CI/CD integration, and ownership model.",
+        },
+        {
+          title: "Load and Performance Testing Audit",
+          text:
+            "Review of load, stress, performance, and reliability testing across tools and technologies, with focus on scenarios, data, environments, bottlenecks, and useful reporting.",
+        },
+        {
+          title: "TMS Implementation and Migration",
+          text:
+            "Selection, setup, migration, and process design for a new test management system, including structure, fields, workflows, reporting, and team adoption.",
+        },
+        {
+          title: "Test Case Review Process",
+          text:
+            "Design and rollout of a practical review process for test cases: quality standards, ownership, review cadence, checklists, metrics, and cleanup rules.",
+        },
+      ],
+    },
     method: {
       kicker: "Method",
-      title: "A practical operating-system approach to QA.",
+      title: "From hidden quality risk to an operating roadmap.",
       items: [
         {
           step: "01",
@@ -199,6 +302,23 @@ export const dictionaries = {
         "Domain background spans telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security, and SaaS-style product delivery.",
       ],
     },
+    fit: {
+      kicker: "Fit",
+      title: "Built for teams that want ownership, not just extra QA capacity.",
+      goodTitle: "Good fit",
+      badTitle: "Not the right fit",
+      good: [
+        "Scaling engineering team with visible release or regression pain",
+        "Leadership wants a system the team can own",
+        "Automation, TMS, Jira, or CI/CD exist but do not create enough visibility",
+        "The team is ready to change workflow, not only buy hours",
+      ],
+      bad: [
+        "Only need cheap manual test execution",
+        "Want isolated automation scripts without process ownership",
+        "Need a staffing vendor or offshore QA capacity",
+      ],
+    },
     plan: {
       kicker: "Next step",
       title:
@@ -219,6 +339,7 @@ export const dictionaries = {
       home: "QualityOps Studio на главную",
       offers: "Услуги",
       method: "Метод",
+      modules: "Модули",
       plan: "План",
       language: "Язык",
     },
@@ -258,6 +379,80 @@ export const dictionaries = {
           "Ускорение onboarding через кросс-функциональную систему адаптации.",
       },
     ],
+    systemMap: {
+      kicker: "Что диагностируем",
+      title:
+        "Проблемы качества редко живут в одном test suite. Обычно они рождаются в системе вокруг него.",
+      text:
+        "Диагностика смотрит, как качество реально проходит через организацию: от требований и зависимостей до release decisions и ownership.",
+      nodes: [
+        {
+          title: "Сигнал требований",
+          text: "Acceptance criteria, риски, продуктовый контекст и скрытые допущения.",
+        },
+        {
+          title: "Jira и зависимости",
+          text: "Межкомандные изменения, blockers, gaps в workflow и потерянные handoffs.",
+        },
+        {
+          title: "Модель регрессии",
+          text: "Покрытие, приоритизация, время прогона, flaky areas и release scope.",
+        },
+        {
+          title: "Сигнал автоматизации",
+          text: "Доверие, стоимость поддержки, reporting, ownership и ложная уверенность.",
+        },
+        {
+          title: "CI/CD и окружения",
+          text: "Pipelines, test data, infrastructure, observability и feedback loops.",
+        },
+        {
+          title: "Ownership релиза",
+          text: "Кто решает, что готово, где риск и что улучшаем дальше.",
+        },
+      ],
+    },
+    cases: {
+      kicker: "Доказательства",
+      title: "Конкретные результаты, переведённые в управленческие выводы.",
+      items: [
+        {
+          metric: "10ч -> 30м",
+          title: "Регрессия стала release signal",
+          symptom: "Межкомандная регрессия была слишком медленной для уверенных частых релизов.",
+          intervention:
+            "Triage автоматизации, приоритизация, улучшения CI/CD, работа с test data и изменения ownership.",
+          result:
+            "Время регрессии сокращено с 10 часов до 30 минут.",
+          leadership:
+            "У руководства появляется быстрый и более надежный ответ на вопрос: можем ли мы релизить?",
+        },
+        {
+          metric: "-50%",
+          title: "Автоматизация стала экономичнее",
+          symptom:
+            "Автоматизация была полезной, но дорогой в запуске, поддержке и доверии.",
+          intervention:
+            "Review suite, cleanup покрытия, оптимизация исполнения и governance того, что стоит автоматизировать.",
+          result:
+            "Стоимость QA automation снижена примерно на 50% при росте покрытия и скорости выполнения.",
+          leadership:
+            "Автоматизация становится инвестицией с понятным сигналом, а не растущим maintenance tax.",
+        },
+        {
+          metric: "1-2 недели",
+          title: "Onboarding стал частью quality system",
+          symptom:
+            "Новым людям требовалось слишком много неформальной помощи, чтобы стать продуктивными в QA, engineering, product и project work.",
+          intervention:
+            "Кросс-функциональный onboarding flow, документация, ожидания и review rhythm.",
+          result:
+            "Ramp-up time сокращен на 1-2 недели.",
+          leadership:
+            "Рост команды меньше зависит от скрытых знаний и доступности отдельных людей.",
+        },
+      ],
+    },
     positioning: {
       kicker: "Позиционирование",
       title: "Не outsourced testing. Не очередной automation vendor.",
@@ -320,9 +515,37 @@ export const dictionaries = {
         },
       ],
     },
+    modules: {
+      kicker: "Специализированные модули",
+      title: "Фокусная работа, когда bottleneck уже виден.",
+      text:
+        "Эти модули можно купить отдельно или добавить к диагностике, Regression Rescue Sprint или Fractional Head of QA.",
+      items: [
+        {
+          title: "Аудит автотестов",
+          text:
+            "Аудит автоматизированных тестов на любом стеке: архитектура, покрытие, flaky tests, maintainability, стоимость исполнения, reporting, CI/CD integration и ownership model.",
+        },
+        {
+          title: "Аудит нагрузочного и performance testing",
+          text:
+            "Review нагрузочного, стрессового, performance и reliability testing на любых инструментах и технологиях: сценарии, данные, окружения, bottlenecks и полезная отчетность.",
+        },
+        {
+          title: "Внедрение TMS и миграция данных",
+          text:
+            "Выбор, настройка, миграция и проектирование процессов для новой test management system: структура, поля, workflows, reporting и adoption командой.",
+        },
+        {
+          title: "Процесс test case review",
+          text:
+            "Дизайн и внедрение практичного процесса ревью тест-кейсов: стандарты качества, ownership, review cadence, чеклисты, метрики и правила cleanup.",
+        },
+      ],
+    },
     method: {
       kicker: "Метод",
-      title: "Практичный operating-system подход к QA.",
+      title: "От скрытого quality risk к операционному roadmap.",
       items: [
         {
           step: "01",
@@ -359,6 +582,23 @@ export const dictionaries = {
         "Доменные области: telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security и SaaS-style product delivery.",
       ],
     },
+    fit: {
+      kicker: "Фокус",
+      title: "Для команд, которым нужен ownership, а не просто больше QA capacity.",
+      goodTitle: "Хороший fit",
+      badTitle: "Не лучший fit",
+      good: [
+        "Растущая engineering-команда с видимой болью в релизах или регрессии",
+        "Руководство хочет систему, которой команда сможет владеть сама",
+        "Automation, TMS, Jira или CI/CD есть, но не дают достаточной прозрачности",
+        "Команда готова менять workflow, а не просто покупать часы",
+      ],
+      bad: [
+        "Нужен только дешевый manual testing execution",
+        "Нужны изолированные automation scripts без process ownership",
+        "Нужен staffing vendor или offshore QA capacity",
+      ],
+    },
     plan: {
       kicker: "Следующий шаг",
       title:
@@ -379,6 +619,7 @@ export const dictionaries = {
       home: "QualityOps Studio početna",
       offers: "Usluge",
       method: "Metod",
+      modules: "Moduli",
       plan: "Plan",
       language: "Jezik",
     },
@@ -418,6 +659,80 @@ export const dictionaries = {
           "Brži onboarding kroz cross-functional sistem uvođenja novih ljudi.",
       },
     ],
+    systemMap: {
+      kicker: "Sta dijagnostikujemo",
+      title:
+        "Problemi kvaliteta retko nastaju u jednom test suite-u. Najcesce nastaju u sistemu oko njega.",
+      text:
+        "Dijagnostika prati kako kvalitet zaista prolazi kroz organizaciju: od zahteva i zavisnosti do release odluka i ownership-a.",
+      nodes: [
+        {
+          title: "Signal zahteva",
+          text: "Acceptance criteria, rizici, product kontekst i skrivene pretpostavke.",
+        },
+        {
+          title: "Jira i zavisnosti",
+          text: "Medjutimske promene, blokade, workflow praznine i promaseni handoff-i.",
+        },
+        {
+          title: "Regression model",
+          text: "Pokrivenost, prioritizacija, vreme izvrsavanja, flaky oblasti i release scope.",
+        },
+        {
+          title: "Signal automatizacije",
+          text: "Poverenje, trosak odrzavanja, reporting, ownership i lazna sigurnost.",
+        },
+        {
+          title: "CI/CD i okruzenja",
+          text: "Pipeline-i, test data, infrastruktura, observability i feedback loop-ovi.",
+        },
+        {
+          title: "Release ownership",
+          text: "Ko odlucuje sta je spremno, sta je rizicno i sta se unapredjuje sledece.",
+        },
+      ],
+    },
+    cases: {
+      kicker: "Dokazi",
+      title: "Konkretni rezultati prevedeni u operativne lekcije.",
+      items: [
+        {
+          metric: "10h -> 30m",
+          title: "Regresija je postala release signal",
+          symptom: "Medjutimska regresija je bila prespora za sigurne i ceste release-e.",
+          intervention:
+            "Triage automatizacije, prioritizacija, CI/CD poboljsanja, test data rad i ownership promene.",
+          result:
+            "Vreme regresije smanjeno sa 10 sati na 30 minuta.",
+          leadership:
+            "Leadership dobija brzi i pouzdaniji odgovor na pitanje: mozemo li da releasujemo?",
+        },
+        {
+          metric: "-50%",
+          title: "Automatizacija je postala ekonomicnija",
+          symptom:
+            "Automatizacija je bila korisna, ali skupa za izvrsavanje, odrzavanje i poverenje.",
+          intervention:
+            "Suite review, cleanup pokrivenosti, optimizacija izvrsavanja i governance oko toga sta treba automatizovati.",
+          result:
+            "Troskovi QA automatizacije smanjeni za oko 50% uz bolje pokrivanje i brze izvrsavanje.",
+          leadership:
+            "Automatizacija postaje investicija sa jasnim signalom, ne rastuci maintenance tax.",
+        },
+        {
+          metric: "1-2 nedelje",
+          title: "Onboarding je postao deo quality system-a",
+          symptom:
+            "Novim ljudima je trebalo previse neformalne pomoci da postanu produktivni kroz QA, engineering, product i project work.",
+          intervention:
+            "Cross-functional onboarding flow, dokumentacija, ocekivanja i review rhythm.",
+          result:
+            "Ramp-up time smanjen za 1-2 nedelje.",
+          leadership:
+            "Rast tima manje zavisi od skrivenog znanja i dostupnosti pojedinaca.",
+        },
+      ],
+    },
     positioning: {
       kicker: "Pozicioniranje",
       title: "Nije outsourced testing. Nije generički automation vendor.",
@@ -480,9 +795,37 @@ export const dictionaries = {
         },
       ],
     },
+    modules: {
+      kicker: "Specijalisticki moduli",
+      title: "Fokusiran rad kada je bottleneck vec vidljiv.",
+      text:
+        "Ovi moduli mogu biti kupljeni posebno ili dodati uz dijagnostiku, Regression Rescue Sprint ili Fractional Head of QA engagement.",
+      items: [
+        {
+          title: "Autotest Audit",
+          text:
+            "Audit automatizovanih testova na bilo kom stack-u: arhitektura, pokrivenost, flaky testovi, maintainability, trosak izvrsavanja, reporting, CI/CD integracija i ownership model.",
+        },
+        {
+          title: "Load and Performance Testing Audit",
+          text:
+            "Pregled load, stress, performance i reliability testing-a kroz alate i tehnologije, sa fokusom na scenarije, podatke, okruzenja, bottleneck-ove i koristan reporting.",
+        },
+        {
+          title: "TMS Implementation and Migration",
+          text:
+            "Izbor, setup, migracija i procesni dizajn za novi test management system: struktura, polja, workflow-i, reporting i usvajanje u timu.",
+        },
+        {
+          title: "Test Case Review Process",
+          text:
+            "Dizajn i rollout prakticnog procesa za review test case-ova: quality standards, ownership, review cadence, checkliste, metrike i cleanup pravila.",
+        },
+      ],
+    },
     method: {
       kicker: "Metod",
-      title: "Praktičan operating-system pristup QA-u.",
+      title: "Od skrivenog quality risk-a do operativnog roadmap-a.",
       items: [
         {
           step: "01",
@@ -517,6 +860,23 @@ export const dictionaries = {
       paragraphs: [
         "Iskustvo uključuje skaliranje distribuiranih QA timova, smanjenje vremena regresije, dizajn onboarding sistema, QA ownership u CI/CD-u, performance testing prakse i AI-assisted workflows za Jira, Confluence i test management.",
         "Domeni uključuju telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security i SaaS-style product delivery.",
+      ],
+    },
+    fit: {
+      kicker: "Fit",
+      title: "Za timove kojima treba ownership, a ne samo dodatni QA capacity.",
+      goodTitle: "Dobar fit",
+      badTitle: "Nije pravi fit",
+      good: [
+        "Rastuci engineering tim sa vidljivim release ili regression problemom",
+        "Leadership zeli sistem koji tim moze sam da poseduje",
+        "Automation, TMS, Jira ili CI/CD postoje, ali ne daju dovoljno vidljivosti",
+        "Tim je spreman da menja workflow, ne samo da kupuje sate",
+      ],
+      bad: [
+        "Treba samo jeftino manual test execution",
+        "Trebaju izolovani automation script-ovi bez process ownership-a",
+        "Treba staffing vendor ili offshore QA capacity",
       ],
     },
     plan: {

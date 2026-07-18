@@ -323,6 +323,7 @@ h3 {
 
 .body-copy p,
 .founder-copy p,
+.section-heading > p:not(.section-kicker),
 .plan-card p {
   margin: 0 0 18px;
   color: var(--muted);
@@ -332,6 +333,109 @@ h3 {
 .section-heading {
   max-width: 760px;
   margin-bottom: 34px;
+}
+
+.system-map-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.system-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.system-node {
+  position: relative;
+  min-height: 178px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.72);
+  padding: 22px;
+}
+
+.system-node::after {
+  position: absolute;
+  top: 34px;
+  right: -13px;
+  width: 13px;
+  height: 1px;
+  background: var(--line);
+  content: "";
+}
+
+.system-node:nth-child(3n)::after,
+.system-node:last-child::after {
+  display: none;
+}
+
+.system-node span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--panel-strong);
+  color: #fffaf0;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.system-node h3 {
+  margin-top: 18px;
+}
+
+.system-node p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.case-section {
+  padding-top: 78px;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.case-card {
+  display: flex;
+  min-height: 420px;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 26px;
+}
+
+.case-card strong {
+  color: var(--accent);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.case-card h3 {
+  margin-top: 18px;
+}
+
+.case-card p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.case-card footer {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  color: #293129;
+  font-size: 15px;
+  font-weight: 760;
 }
 
 .signal-grid {
@@ -393,6 +497,36 @@ h3 {
   content: "";
 }
 
+.module-section {
+  border-top: 1px solid var(--line);
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.module-card {
+  min-height: 244px;
+  border: 1px solid rgba(32, 42, 37, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.82), rgba(255, 250, 240, 0.54)),
+    var(--panel);
+  padding: 22px;
+}
+
+.module-card h3 {
+  font-size: 19px;
+}
+
+.module-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .method-section {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -424,6 +558,47 @@ h3 {
   color: var(--muted);
 }
 
+.fit-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.fit-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 250, 240, 0.62);
+  padding: 24px;
+}
+
+.fit-card.good-fit {
+  background: var(--panel-strong);
+  color: #fffaf0;
+}
+
+.fit-card ul {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fit-card li {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.fit-card.good-fit li {
+  color: rgba(255, 250, 240, 0.78);
+}
+
 .plan-section {
   padding-bottom: 108px;
 }
@@ -448,7 +623,11 @@ h3 {
   .hero-grid,
   .two-column,
   .founder-section,
+  .fit-section,
   .offer-grid,
+  .module-grid,
+  .case-grid,
+  .system-map,
   .signal-grid {
     grid-template-columns: 1fr;
   }
@@ -459,6 +638,27 @@ h3 {
 
   .proof-band {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .system-node::after {
+    top: auto;
+    right: auto;
+    bottom: -13px;
+    left: 38px;
+    width: 1px;
+    height: 13px;
+  }
+
+  .system-node:nth-child(3n)::after {
+    display: block;
+  }
+
+  .system-node:last-child::after {
+    display: none;
+  }
+
+  .fit-grid {
+    grid-template-columns: 1fr;
   }
 
   .proof-item:nth-child(2) {
@@ -491,6 +691,8 @@ h3 {
   .nav-links {
     width: 100%;
     justify-content: space-between;
+    gap: 12px;
+    overflow-x: auto;
   }
 
   .hero-copy h1 {
