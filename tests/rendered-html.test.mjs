@@ -37,6 +37,7 @@ test("renders the English default locale page", async () => {
   assert.match(html, /Quality System Diagnostic/);
   assert.match(html, /What gets diagnosed/);
   assert.match(html, /Autotest Audit/);
+  assert.match(html, /Jira Dependency Process/);
   assert.match(html, /TMS Implementation and Migration/);
   assert.match(html, />EN</);
   assert.match(html, />RU</);
@@ -58,6 +59,7 @@ test("renders Russian and Serbian locale pages", async () => {
   assert.match(ruHtml, /Системы качества для предсказуемых релизов/);
   assert.match(ruHtml, /Запланировать диагностику/);
   assert.match(ruHtml, /Аудит автотестов/);
+  assert.match(ruHtml, /межкомандных зависимостей/);
   assert.match(srHtml, /Sistemi kvaliteta za predvidive isporuke/);
   assert.match(srHtml, /Zakažite dijagnostiku/);
   assert.match(srHtml, /Autotest Audit/);

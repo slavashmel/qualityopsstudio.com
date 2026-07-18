@@ -212,6 +212,14 @@ Use proof: AI-assisted Jira/Confluence to TMS workflows.
 
 CTA: AI-assisted QA workflow review.
 
+### 6. Breaking Changes Are A Management Problem Before They Are A Testing Problem
+
+Angle: teams often break each other because dependencies live in memory, chats, or late release checks.
+
+Use proof: Jira dependency tracking and automation.
+
+CTA: Jira Dependency Process.
+
 ## Possible New Offer
 
 ### AI-Assisted QA Workflow Review
@@ -232,6 +240,28 @@ Deliverables:
 - pilot workflow with evaluation criteria.
 
 This should be secondary for now, not the main offer, but it is a strong market-facing wedge.
+
+### Jira Dependency Process
+
+Format: 2-4 weeks.
+
+Buyer problem:
+
+- teams ship changes that unexpectedly affect other teams;
+- breaking changes are discovered too late in regression or production;
+- dependent teams forget to update their side of the change;
+- Jira tracks tasks, but does not make cross-team release risk visible.
+
+Deliverables:
+
+- dependency workflow map;
+- breaking-change classification and rules;
+- Jira fields, statuses, automation, and review gates;
+- dependent-team acknowledgement process;
+- release-readiness view for cross-team changes;
+- rollout guide and team operating rules.
+
+This is a strong module because it translates QA leadership into an engineering-management control system.
 
 ## Suggested Priority
 

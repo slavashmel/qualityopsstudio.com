@@ -252,6 +252,11 @@ export const dictionaries = {
             "Review of load, stress, performance, and reliability testing across tools and technologies, with focus on scenarios, data, environments, bottlenecks, and useful reporting.",
         },
         {
+          title: "Jira Dependency Process",
+          text:
+            "Design of a Jira-based process for breaking changes and cross-team dependencies, so teams cannot silently ship changes that block or break dependent teams.",
+        },
+        {
           title: "TMS Implementation and Migration",
           text:
             "Selection, setup, migration, and process design for a new test management system, including structure, fields, workflows, reporting, and team adoption.",
@@ -532,6 +537,11 @@ export const dictionaries = {
             "Review нагрузочного, стрессового, performance и reliability testing на любых инструментах и технологиях: сценарии, данные, окружения, bottlenecks и полезная отчетность.",
         },
         {
+          title: "Jira Dependency Process",
+          text:
+            "Проектирование Jira-процесса для breaking changes и межкомандных зависимостей, чтобы команды не могли незаметно задеплоить изменения, которые ломают или блокируют зависимые команды.",
+        },
+        {
           title: "Внедрение TMS и миграция данных",
           text:
             "Выбор, настройка, миграция и проектирование процессов для новой test management system: структура, поля, workflows, reporting и adoption командой.",
@@ -810,6 +820,11 @@ export const dictionaries = {
           title: "Load and Performance Testing Audit",
           text:
             "Pregled load, stress, performance i reliability testing-a kroz alate i tehnologije, sa fokusom na scenarije, podatke, okruzenja, bottleneck-ove i koristan reporting.",
+        },
+        {
+          title: "Jira Dependency Process",
+          text:
+            "Dizajn Jira procesa za breaking changes i medjutimske zavisnosti, tako da timovi ne mogu tiho da deploy-uju promene koje lome ili blokiraju zavisne timove.",
         },
         {
           title: "TMS Implementation and Migration",

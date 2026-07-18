@@ -503,12 +503,12 @@ h3 {
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
 }
 
 .module-card {
-  min-height: 244px;
+  min-height: 276px;
   border: 1px solid rgba(32, 42, 37, 0.18);
   border-radius: 8px;
   background:
@@ -659,6 +659,10 @@ h3 {
 
   .fit-grid {
     grid-template-columns: 1fr;
+  }
+
+  .module-card {
+    min-height: auto;
   }
 
   .proof-item:nth-child(2) {
