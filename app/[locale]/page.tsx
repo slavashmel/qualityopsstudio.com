@@ -69,7 +69,8 @@ export default async function LocaleHome({ params }: LocalePageProps) {
         <nav className="top-nav" aria-label={dictionary.nav.aria}>
           <a className="brand" href="#top" aria-label={dictionary.nav.home}>
             <span className="brand-mark" aria-hidden="true">
-              <span />
+              <span className="brand-cross" />
+              <span className="brand-dot" />
             </span>
             <span>
               QualityOps <em>Studio</em>

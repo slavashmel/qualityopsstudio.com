@@ -80,39 +80,52 @@ main {
 }
 
 .brand-mark {
-  display: inline-grid;
+  position: relative;
+  display: inline-block;
   width: 34px;
   height: 34px;
-  place-items: center;
   border-radius: 7px;
-  background: #fffaf0;
+  background: var(--panel-strong);
 }
 
-.brand-mark span {
-  position: relative;
+.brand-cross,
+.brand-dot {
+  position: absolute;
   display: block;
-  width: 18px;
-  height: 18px;
+  border-radius: 999px;
 }
 
-.brand-mark span::before,
-.brand-mark span::after {
+.brand-cross {
+  inset: 8px;
+}
+
+.brand-cross::before,
+.brand-cross::after {
   position: absolute;
   inset: 50% auto auto 50%;
   border-radius: 999px;
-  background: var(--panel-strong);
+  background: #fffaf0;
   content: "";
   transform: translate(-50%, -50%);
 }
 
-.brand-mark span::before {
+.brand-cross::before {
   width: 18px;
   height: 5px;
 }
 
-.brand-mark span::after {
+.brand-cross::after {
   width: 5px;
   height: 18px;
+}
+
+.brand-dot {
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  transform: translate(-50%, -50%);
 }
 
 .nav-links {
