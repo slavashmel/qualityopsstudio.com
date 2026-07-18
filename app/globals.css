@@ -80,61 +80,39 @@ main {
 }
 
 .brand-mark {
-  position: relative;
-  display: inline-block;
+  display: inline-grid;
   width: 34px;
   height: 34px;
+  place-items: center;
   border-radius: 7px;
-  background: var(--panel-strong);
+  background: #fffaf0;
 }
 
-.mark-line,
-.mark-dot {
-  position: absolute;
-  border-radius: 999px;
-}
-
-.mark-line {
-  left: 9px;
+.brand-mark span {
+  position: relative;
+  display: block;
   width: 18px;
-  height: 3px;
-  background: rgba(255, 250, 240, 0.58);
+  height: 18px;
 }
 
-.mark-line-top {
-  top: 11px;
-}
-
-.mark-line-mid {
-  top: 16px;
-  width: 23px;
-}
-
-.mark-line-bottom {
-  top: 21px;
-}
-
-.mark-pulse {
+.brand-mark span::before,
+.brand-mark span::after {
   position: absolute;
-  inset: 0;
-  width: 34px;
-  height: 34px;
+  inset: 50% auto auto 50%;
+  border-radius: 999px;
+  background: var(--panel-strong);
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
-.mark-pulse path {
-  fill: none;
-  stroke: #fffaf0;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 4.4;
+.brand-mark span::before {
+  width: 18px;
+  height: 5px;
 }
 
-.mark-dot {
-  top: 14px;
-  right: 6px;
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
+.brand-mark span::after {
+  width: 5px;
+  height: 18px;
 }
 
 .nav-links {

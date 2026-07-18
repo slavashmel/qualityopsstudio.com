@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1380" viewBox="0 0 1800 1380" fill="none">
+  <rect width="1800" height="1380" fill="#F6F2EA"/>
+  <style>
+    .title { font: 850 50px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .subtitle { font: 500 22px Inter, Arial, sans-serif; fill: #62685E; letter-spacing: 0; }
+    .label { font: 800 17px Inter, Arial, sans-serif; fill: #B94C2D; letter-spacing: .08em; }
+    .word { font: 850 40px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .word-soft { font: 570 40px Inter, Arial, sans-serif; fill: #171A16; letter-spacing: 0; }
+    .studio { font: 700 15px Inter, Arial, sans-serif; fill: #687064; letter-spacing: .18em; }
+    .small { font: 520 14px Inter, Arial, sans-serif; fill: #62685E; letter-spacing: 0; }
+    .note-inverse { font: 620 18px Inter, Arial, sans-serif; fill: #C9D0C8; letter-spacing: 0; }
+    .panel { fill: #FFFAF0; stroke: #D9D1C2; stroke-width: 2; rx: 18; }
+    .tile { fill: #202A25; }
+    .cream { stroke: #FFFAF0; }
+    .gold { stroke: #C28D36; }
+    .accent { stroke: #B94C2D; }
+    .sage { stroke: #587060; }
+    .muted { stroke: #8D968B; }
+  </style>
+
+  <text x="80" y="88" class="title">QualityOps Studio Cross Refinement</text>
+  <text x="80" y="128" class="subtitle">Keep the square/cross that works in miniature, then add one small detail so it stops reading as medical and starts reading as system, signal, Q, or release confidence.</text>
+
+  <rect class="panel" x="80" y="190" width="390" height="300" rx="18"/>
+  <text x="112" y="235" class="label">01 CENTER DOT</text>
+  <g transform="translate(120 276)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="46" cy="46" r="10" fill="#B94C2D"/>
+  </g>
+  <text x="230" y="316" class="word-soft">Quality</text>
+  <text x="230" y="360" class="word">Ops</text>
+  <text x="230" y="392" class="studio">STUDIO</text>
+  <text x="112" y="452" class="small">Current direction. Strongest in tiny sizes.</text>
+
+  <rect class="panel" x="510" y="190" width="390" height="300" rx="18"/>
+  <text x="542" y="235" class="label">02 OFFSET SIGNAL DOT</text>
+  <g transform="translate(550 276)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="62" cy="30" r="7" fill="#C28D36"/>
+  </g>
+  <text x="660" y="316" class="word-soft">Quality</text>
+  <text x="660" y="360" class="word">Ops</text>
+  <text x="660" y="392" class="studio">STUDIO</text>
+  <text x="542" y="452" class="small">Smallest change. Dot becomes signal, not medicine.</text>
+
+  <rect class="panel" x="940" y="190" width="390" height="300" rx="18"/>
+  <text x="972" y="235" class="label">03 QUALITY PATH</text>
+  <g transform="translate(980 276)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M30 61L46 46L64 28" class="gold" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="46" cy="46" r="5" fill="#B94C2D"/>
+  </g>
+  <text x="1090" y="316" class="word-soft">Quality</text>
+  <text x="1090" y="360" class="word">Ops</text>
+  <text x="1090" y="392" class="studio">STUDIO</text>
+  <text x="972" y="452" class="small">Best story: process path through the quality system.</text>
+
+  <rect class="panel" x="1370" y="190" width="350" height="300" rx="18"/>
+  <text x="1402" y="235" class="label">04 Q CUT</text>
+  <g transform="translate(1408 276)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <circle cx="46" cy="46" r="23" class="cream" stroke-width="7"/>
+    <path d="M58 58L70 70" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M28 46H64" class="gold" stroke-width="5" stroke-linecap="round"/>
+    <path d="M46 28V64" class="gold" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="1516" y="316" class="word-soft">Quality</text>
+  <text x="1516" y="360" class="word">Ops</text>
+  <text x="1516" y="392" class="studio">STUDIO</text>
+  <text x="1402" y="452" class="small">More ownable, but not as minimal.</text>
+
+  <rect class="panel" x="80" y="550" width="390" height="300" rx="18"/>
+  <text x="112" y="595" class="label">05 FOUR NODES</text>
+  <g transform="translate(120 636)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M26 46H66" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 26V66" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="26" cy="46" r="5" fill="#587060"/>
+    <circle cx="46" cy="26" r="5" fill="#C28D36"/>
+    <circle cx="66" cy="46" r="5" fill="#B94C2D"/>
+    <circle cx="46" cy="66" r="5" fill="#587060"/>
+  </g>
+  <text x="230" y="676" class="word-soft">Quality</text>
+  <text x="230" y="720" class="word">Ops</text>
+  <text x="230" y="752" class="studio">STUDIO</text>
+  <text x="112" y="812" class="small">Turns cross into system map. Maybe too busy small.</text>
+
+  <rect class="panel" x="510" y="550" width="390" height="300" rx="18"/>
+  <text x="542" y="595" class="label">06 RELEASE GATE CUT</text>
+  <g transform="translate(550 636)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M31 36H61V56H31V36Z" stroke="#C28D36" stroke-width="5" stroke-linejoin="round"/>
+  </g>
+  <text x="660" y="676" class="word-soft">Quality</text>
+  <text x="660" y="720" class="word">Ops</text>
+  <text x="660" y="752" class="studio">STUDIO</text>
+  <text x="542" y="812" class="small">Adds gate/release meaning. Slightly mechanical.</text>
+
+  <rect class="panel" x="940" y="550" width="390" height="300" rx="18"/>
+  <text x="972" y="595" class="label">07 CORNER SIGNAL</text>
+  <g transform="translate(980 636)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M25 46H67" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 25V67" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M60 24C67 29 71 36 72 44" class="gold" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="72" cy="44" r="5" fill="#C28D36"/>
+  </g>
+  <text x="1090" y="676" class="word-soft">Quality</text>
+  <text x="1090" y="720" class="word">Ops</text>
+  <text x="1090" y="752" class="studio">STUDIO</text>
+  <text x="972" y="812" class="small">Signal detail is subtle, keeps mark very clean.</text>
+
+  <rect class="panel" x="1370" y="550" width="350" height="300" rx="18"/>
+  <text x="1402" y="595" class="label">08 BROKEN CROSS</text>
+  <g transform="translate(1408 636)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/>
+    <path d="M24 46H39" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M53 46H68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 24V39" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <path d="M46 53V68" class="cream" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="46" cy="46" r="6" fill="#C28D36"/>
+  </g>
+  <text x="1516" y="676" class="word-soft">Quality</text>
+  <text x="1516" y="720" class="word">Ops</text>
+  <text x="1516" y="752" class="studio">STUDIO</text>
+  <text x="1402" y="812" class="small">Less medical, more system node. Very minimal.</text>
+
+  <text x="80" y="945" class="title">Favicon Test</text>
+  <text x="80" y="984" class="subtitle">The mark should still read at 16-32px. This is why the base cross keeps winning.</text>
+
+  <g transform="translate(90 1048) scale(.72)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/><path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/><circle cx="46" cy="46" r="10" fill="#B94C2D"/>
+  </g>
+  <g transform="translate(190 1048) scale(.72)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/><path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/><circle cx="62" cy="30" r="7" fill="#C28D36"/>
+  </g>
+  <g transform="translate(290 1048) scale(.72)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/><path d="M24 46H68" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 24V68" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M30 61L46 46L64 28" class="gold" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="46" cy="46" r="5" fill="#B94C2D"/>
+  </g>
+  <g transform="translate(390 1048) scale(.72)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/><path d="M25 46H67" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 25V67" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M60 24C67 29 71 36 72 44" class="gold" stroke-width="5" stroke-linecap="round"/><circle cx="72" cy="44" r="5" fill="#C28D36"/>
+  </g>
+  <g transform="translate(490 1048) scale(.72)">
+    <rect class="tile" x="0" y="0" width="92" height="92" rx="10"/><path d="M24 46H39" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M53 46H68" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 24V39" class="cream" stroke-width="7" stroke-linecap="round"/><path d="M46 53V68" class="cream" stroke-width="7" stroke-linecap="round"/><circle cx="46" cy="46" r="6" fill="#C28D36"/>
+  </g>
+
+  <rect x="80" y="1210" width="1640" height="110" rx="18" fill="#202A25"/>
+  <text x="124" y="1278" class="note-inverse">My shortlist: 03 Quality Path, 07 Corner Signal, 08 Broken Cross. All keep the miniature strength while making the symbol less medical.</text>
+</svg>
