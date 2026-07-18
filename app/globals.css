@@ -84,9 +84,8 @@ main {
   display: inline-block;
   width: 34px;
   height: 34px;
-  border: 1px solid rgba(255, 250, 240, 0.2);
   border-radius: 7px;
-  background: var(--panel-strong);
+  background: #fffaf0;
 }
 
 .brand-pulse {
@@ -98,7 +97,7 @@ main {
 
 .brand-pulse path {
   fill: none;
-  stroke: #fffaf0;
+  stroke: var(--panel-strong);
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 6.8;
