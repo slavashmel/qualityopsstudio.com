@@ -117,6 +117,26 @@ The founder section can become sharper:
 
 Keep it short. The site sells a business outcome, not a resume.
 
+### 7. Add A Management Visibility Layer
+
+Fresh CV evidence from July 2026 adds a stronger executive angle: QA operating management, not only delivery/process improvement.
+
+Add a homepage section around:
+
+- QA resource planning;
+- weekly outcome reporting;
+- estimate review and governance;
+- capacity, workload, planned absence, and delivery-risk visibility;
+- competency matrix and knowledge-risk mapping;
+- evidence-based performance and process reviews;
+- operational QA portal concepts.
+
+Suggested headline:
+
+> From QA activity to decisions leadership can trust.
+
+This makes the offer more valuable for CTOs and VP Engineering leaders because it sells control, visibility, and operating cadence.
+
 ## Infographic Ideas
 
 ### Quality System Map
@@ -262,6 +282,45 @@ Deliverables:
 - rollout guide and team operating rules.
 
 This is a strong module because it translates QA leadership into an engineering-management control system.
+
+### QA Management Reporting And Capacity Planning
+
+Format: 2-4 weeks.
+
+Buyer problem:
+
+- leadership does not see QA workload and capacity clearly;
+- estimates vary by team or person and are hard to challenge;
+- planned absence, partial allocation, and project pressure are not visible early enough;
+- QA reporting is manual, inconsistent, or too activity-based.
+
+Deliverables:
+
+- QA allocation and capacity model;
+- weekly outcome-reporting template;
+- estimate review process;
+- workload, absence, Jira activity, and delivery-risk signals;
+- stakeholder reporting rhythm;
+- handoff guide for ongoing operation.
+
+### Competency And Knowledge Risk Matrix
+
+Format: 2-4 weeks.
+
+Buyer problem:
+
+- critical knowledge is concentrated in a few people;
+- teams do not know where coverage gaps or missing learning materials are;
+- onboarding and rotation decisions are made by memory;
+- leadership lacks evidence for training priorities.
+
+Deliverables:
+
+- competency coverage matrix;
+- single-point-of-failure view;
+- missing-material and stale-knowledge register;
+- training, mentoring, and rotation priorities;
+- lightweight review cadence.
 
 ## Suggested Priority
 

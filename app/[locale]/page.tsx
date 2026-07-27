@@ -190,6 +190,22 @@ export default async function LocaleHome({ params }: LocalePageProps) {
         </div>
       </section>
 
+      <section className="section management-section">
+        <div className="section-heading">
+          <p className="section-kicker">{dictionary.management.kicker}</p>
+          <h2>{dictionary.management.title}</h2>
+          <p>{dictionary.management.text}</p>
+        </div>
+        <div className="management-grid">
+          {dictionary.management.items.map((item) => (
+            <article className="management-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section" id="offers">
         <div className="section-heading">
           <p className="section-kicker">{dictionary.offers.kicker}</p>

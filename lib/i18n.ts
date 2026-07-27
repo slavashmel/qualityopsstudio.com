@@ -76,7 +76,7 @@ export const dictionaries = {
       panelLabel: "Release confidence advisory",
       panelItems: ["People", "Process", "Automation", "CI/CD", "Release Risk"],
       panelText:
-        "Built from 20+ years in IT and hands-on QA leadership across telecom, fintech, enterprise software, infrastructure, and high-load product teams.",
+        "Built from 10+ years in quality engineering and QA leadership, backed by an earlier career in infrastructure and technical operations.",
     },
     proof: [
       {
@@ -193,6 +193,44 @@ export const dictionaries = {
         "AI tools are being used ad hoc without a quality workflow",
       ],
     },
+    management: {
+      kicker: "Management visibility",
+      title: "From QA activity to decisions leadership can trust.",
+      text:
+        "Fresh delivery risk is often hidden in workload, estimates, knowledge gaps, absences, stalled dependencies, and unclear ownership. QualityOps Studio turns that operational noise into management views and review rhythms.",
+      items: [
+        {
+          title: "Capacity and workload",
+          text:
+            "QA allocation, partial availability, planned absences, current work, and delivery pressure made visible before they become release surprises.",
+        },
+        {
+          title: "Estimation governance",
+          text:
+            "Regular review of QA estimates, outliers, planning realism, and evidence-based feedback on where work is under- or over-scoped.",
+        },
+        {
+          title: "Knowledge risk",
+          text:
+            "Competency coverage across teams, single points of failure, missing learning materials, and training or rotation priorities.",
+        },
+        {
+          title: "Evidence-based reviews",
+          text:
+            "People and process reviews based on dated evidence from delivery systems, not only memory, confidence, or the loudest meeting voice.",
+        },
+        {
+          title: "Readiness and partner risk",
+          text:
+            "Cross-functional views that connect requirements, Jira state, test scope, incidents, ownership, acceptance criteria, and escalation asks.",
+        },
+        {
+          title: "Operational QA portal",
+          text:
+            "A shared surface for reporting, disabled-test governance, test catalogue signals, audit trails, resource pools, and performance-test metrics.",
+        },
+      ],
+    },
     offers: {
       kicker: "Consulting products",
       title: "Three clear ways to buy the work.",
@@ -205,6 +243,8 @@ export const dictionaries = {
           outcomes: [
             "Current-state map of your QA and release flow",
             "Risk and bottleneck report with evidence",
+            "Capacity, workload, and delivery-risk visibility",
+            "Competency and knowledge-risk map",
             "30/60/90-day improvement roadmap",
             "Executive workshop with practical next steps",
           ],
@@ -228,7 +268,8 @@ export const dictionaries = {
             "Senior QA leadership for scaling teams that need direction, standards, mentoring, and operating rhythm without a full-time hire.",
           outcomes: [
             "QA operating model and responsibilities",
-            "Metrics, OKRs, review cadence, and stakeholder reporting",
+            "Capacity model, weekly reporting, and estimation governance",
+            "Competency matrix and evidence-based review rhythm",
             "Hiring, onboarding, mentoring, and lead development",
             "Automation governance and cross-team dependency process",
           ],
@@ -255,6 +296,16 @@ export const dictionaries = {
           title: "Jira Dependency Process",
           text:
             "Design of a Jira-based process for breaking changes and cross-team dependencies, so teams cannot silently ship changes that block or break dependent teams.",
+        },
+        {
+          title: "QA Management Reporting",
+          text:
+            "A repeatable reporting layer for QA allocation, workload, capacity, estimates, planned absences, delivery risks, and weekly outcomes.",
+        },
+        {
+          title: "Competency and Knowledge Risk Matrix",
+          text:
+            "A practical map of team coverage, skill gaps, single points of failure, missing learning materials, and training or rotation priorities.",
         },
         {
           title: "TMS Implementation and Migration",
@@ -304,6 +355,7 @@ export const dictionaries = {
         "Head of QA with the technical depth to inspect the system and the leadership range to change it.",
       paragraphs: [
         "Experience includes scaling distributed QA teams, reducing regression runtime, designing onboarding systems, enabling QA ownership of CI/CD, building performance testing practices, and introducing AI-assisted workflows for Jira, Confluence, and test management.",
+        "Recent work also includes QA resource planning, weekly outcome reporting, estimate reviews, competency matrices, evidence-based review workflows, and operational QA portal concepts.",
         "Domain background spans telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security, and SaaS-style product delivery.",
       ],
     },
@@ -361,7 +413,7 @@ export const dictionaries = {
       panelLabel: "Консалтинг по release confidence",
       panelItems: ["Люди", "Процесс", "Автоматизация", "CI/CD", "Риски релиза"],
       panelText:
-        "Основано на 20+ годах в IT и hands-on QA leadership в telecom, fintech, enterprise software, infrastructure и high-load продуктовых командах.",
+        "Основано на 10+ годах в quality engineering и QA leadership, с более ранним опытом в infrastructure и technical operations.",
     },
     proof: [
       {
@@ -478,6 +530,44 @@ export const dictionaries = {
         "AI-инструменты используются точечно, без quality workflow",
       ],
     },
+    management: {
+      kicker: "Management visibility",
+      title: "От QA-активности к решениям, которым руководство может доверять.",
+      text:
+        "Свежий delivery risk часто прячется в workload, оценках, knowledge gaps, отпусках, зависимостях и неясном ownership. QualityOps Studio превращает этот операционный шум в управленческие views и review rhythm.",
+      items: [
+        {
+          title: "Capacity и workload",
+          text:
+            "QA allocation, partial availability, planned absences, текущая работа и delivery pressure становятся видимыми до того, как превращаются в сюрпризы перед релизом.",
+        },
+        {
+          title: "Estimation governance",
+          text:
+            "Регулярное ревью QA estimates, outliers, planning realism и evidence-based feedback по задачам, где объем недооценен или переоценен.",
+        },
+        {
+          title: "Knowledge risk",
+          text:
+            "Покрытие компетенций по командам, single points of failure, недостающие learning materials и приоритеты training/rotation.",
+        },
+        {
+          title: "Evidence-based reviews",
+          text:
+            "Ревью людей и процессов на основе dated evidence из delivery systems, а не только памяти, уверенности или самого громкого голоса на встрече.",
+        },
+        {
+          title: "Readiness и partner risk",
+          text:
+            "Cross-functional views, которые соединяют требования, Jira state, test scope, incidents, ownership, acceptance criteria и escalation asks.",
+        },
+        {
+          title: "Operational QA portal",
+          text:
+            "Единая поверхность для reporting, disabled-test governance, test catalogue signals, audit trails, resource pools и performance-test metrics.",
+        },
+      ],
+    },
     offers: {
       kicker: "Консалтинговые продукты",
       title: "Три понятных способа купить работу.",
@@ -490,6 +580,8 @@ export const dictionaries = {
           outcomes: [
             "Карта текущего QA и release flow",
             "Отчёт по рискам и bottlenecks с доказательствами",
+            "Видимость capacity, workload и delivery risks",
+            "Competency и knowledge-risk map",
             "30/60/90-дневный roadmap улучшений",
             "Executive workshop с практическими следующими шагами",
           ],
@@ -513,7 +605,8 @@ export const dictionaries = {
             "Senior QA leadership для растущих команд, которым нужны направление, стандарты, менторинг и операционный ритм без full-time найма.",
           outcomes: [
             "QA operating model и распределение ответственности",
-            "Метрики, OKR, review cadence и отчётность для stakeholders",
+            "Capacity model, weekly reporting и estimation governance",
+            "Competency matrix и evidence-based review rhythm",
             "Hiring, onboarding, mentoring и развитие лидов",
             "Automation governance и процесс межкомандных зависимостей",
           ],
@@ -540,6 +633,16 @@ export const dictionaries = {
           title: "Jira Dependency Process",
           text:
             "Проектирование Jira-процесса для breaking changes и межкомандных зависимостей, чтобы команды не могли незаметно задеплоить изменения, которые ломают или блокируют зависимые команды.",
+        },
+        {
+          title: "QA Management Reporting",
+          text:
+            "Повторяемый reporting layer для QA allocation, workload, capacity, estimates, planned absences, delivery risks и weekly outcomes.",
+        },
+        {
+          title: "Competency и Knowledge Risk Matrix",
+          text:
+            "Практичная карта покрытия команд, skill gaps, single points of failure, недостающих learning materials и приоритетов training/rotation.",
         },
         {
           title: "Внедрение TMS и миграция данных",
@@ -589,6 +692,7 @@ export const dictionaries = {
         "Head of QA с технической глубиной, чтобы разобрать систему, и лидерским диапазоном, чтобы её изменить.",
       paragraphs: [
         "Опыт включает масштабирование распределённых QA-команд, сокращение времени регрессии, построение onboarding systems, ownership QA в CI/CD, практики performance testing и AI-assisted workflows для Jira, Confluence и test management.",
+        "Свежая управленческая работа включает QA resource planning, weekly outcome reporting, estimate reviews, competency matrices, evidence-based review workflows и концепции operational QA portal.",
         "Доменные области: telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security и SaaS-style product delivery.",
       ],
     },
@@ -646,7 +750,7 @@ export const dictionaries = {
       panelLabel: "Release confidence advisory",
       panelItems: ["Ljudi", "Proces", "Automatizacija", "CI/CD", "Rizik release-a"],
       panelText:
-        "Zasnovano na 20+ godina u IT-u i hands-on QA leadership iskustvu u telecom, fintech, enterprise software, infrastructure i high-load product timovima.",
+        "Zasnovano na 10+ godina u quality engineering-u i QA leadership-u, uz ranije iskustvo u infrastrukturi i technical operations.",
     },
     proof: [
       {
@@ -763,6 +867,44 @@ export const dictionaries = {
         "AI alati se koriste ad hoc, bez quality workflow-a",
       ],
     },
+    management: {
+      kicker: "Management visibility",
+      title: "Od QA aktivnosti do odluka kojima leadership moze da veruje.",
+      text:
+        "Svezi delivery risk cesto je sakriven u workload-u, estimatima, knowledge gap-ovima, odsustvima, zavisnostima i nejasnom ownership-u. QualityOps Studio pretvara taj operativni sum u management views i review rhythm.",
+      items: [
+        {
+          title: "Capacity i workload",
+          text:
+            "QA allocation, partial availability, planned absences, trenutni rad i delivery pressure postaju vidljivi pre nego sto postanu release iznenadjenje.",
+        },
+        {
+          title: "Estimation governance",
+          text:
+            "Redovan review QA estimate-a, outlier-a, planning realism-a i evidence-based feedback-a za rad koji je under- ili over-scoped.",
+        },
+        {
+          title: "Knowledge risk",
+          text:
+            "Competency coverage kroz timove, single points of failure, nedostajuci learning materials i training ili rotation prioriteti.",
+        },
+        {
+          title: "Evidence-based reviews",
+          text:
+            "Review ljudi i procesa na osnovu dated evidence iz delivery sistema, ne samo secanja, sigurnosti ili najglasnijeg glasa na sastanku.",
+        },
+        {
+          title: "Readiness i partner risk",
+          text:
+            "Cross-functional views koji spajaju zahteve, Jira state, test scope, incidente, ownership, acceptance criteria i escalation asks.",
+        },
+        {
+          title: "Operational QA portal",
+          text:
+            "Zajednicka povrsina za reporting, disabled-test governance, test catalogue signals, audit trails, resource pools i performance-test metrics.",
+        },
+      ],
+    },
     offers: {
       kicker: "Konsalting proizvodi",
       title: "Tri jasna načina da kupite rad.",
@@ -775,6 +917,8 @@ export const dictionaries = {
           outcomes: [
             "Mapa trenutnog QA i release toka",
             "Izveštaj o rizicima i bottleneck-ovima sa dokazima",
+            "Vidljivost capacity-ja, workload-a i delivery risk-a",
+            "Competency i knowledge-risk map",
             "30/60/90-dnevni roadmap poboljšanja",
             "Executive workshop sa praktičnim sledećim koracima",
           ],
@@ -798,7 +942,8 @@ export const dictionaries = {
             "Senior QA leadership za rastuće timove kojima trebaju smer, standardi, mentoring i operativni ritam bez full-time zapošljavanja.",
           outcomes: [
             "QA operating model i odgovornosti",
-            "Metrike, OKR, review cadence i stakeholder reporting",
+            "Capacity model, weekly reporting i estimation governance",
+            "Competency matrix i evidence-based review rhythm",
             "Hiring, onboarding, mentoring i razvoj leadova",
             "Automation governance i proces za međutimsku zavisnost",
           ],
@@ -825,6 +970,16 @@ export const dictionaries = {
           title: "Jira Dependency Process",
           text:
             "Dizajn Jira procesa za breaking changes i medjutimske zavisnosti, tako da timovi ne mogu tiho da deploy-uju promene koje lome ili blokiraju zavisne timove.",
+        },
+        {
+          title: "QA Management Reporting",
+          text:
+            "Ponovljiv reporting layer za QA allocation, workload, capacity, estimates, planned absences, delivery risks i weekly outcomes.",
+        },
+        {
+          title: "Competency and Knowledge Risk Matrix",
+          text:
+            "Prakticna mapa team coverage-a, skill gap-ova, single points of failure, nedostajucih learning materials i training ili rotation prioriteta.",
         },
         {
           title: "TMS Implementation and Migration",
@@ -874,6 +1029,7 @@ export const dictionaries = {
         "Head of QA sa tehničkom dubinom da pregleda sistem i leadership opsegom da ga promeni.",
       paragraphs: [
         "Iskustvo uključuje skaliranje distribuiranih QA timova, smanjenje vremena regresije, dizajn onboarding sistema, QA ownership u CI/CD-u, performance testing prakse i AI-assisted workflows za Jira, Confluence i test management.",
+        "Noviji management rad uključuje QA resource planning, weekly outcome reporting, estimate reviews, competency matrices, evidence-based review workflows i operational QA portal koncepte.",
         "Domeni uključuju telecom, fintech, trading systems, enterprise software, SDN/NFV, infrastructure, document security i SaaS-style product delivery.",
       ],
     },

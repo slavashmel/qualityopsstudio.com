@@ -454,6 +454,37 @@ h3 {
   font-weight: 720;
 }
 
+.management-section {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 240, 0.3), rgba(217, 209, 194, 0.12));
+}
+
+.management-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.management-card {
+  min-height: 190px;
+  border: 1px solid rgba(32, 42, 37, 0.18);
+  border-radius: 8px;
+  background: var(--panel);
+  padding: 22px;
+}
+
+.management-card h3 {
+  font-size: 20px;
+}
+
+.management-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
 .offer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -503,12 +534,12 @@ h3 {
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 12px;
 }
 
 .module-card {
-  min-height: 276px;
+  min-height: 252px;
   border: 1px solid rgba(32, 42, 37, 0.18);
   border-radius: 8px;
   background:
@@ -627,6 +658,7 @@ h3 {
   .offer-grid,
   .module-grid,
   .case-grid,
+  .management-grid,
   .system-map,
   .signal-grid {
     grid-template-columns: 1fr;
