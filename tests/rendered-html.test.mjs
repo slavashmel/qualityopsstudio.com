@@ -2,7 +2,12 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render(path = "/", headers = {}, origin = "http://localhost") {
+async function render(
+  path = "/",
+  headers = {},
+  origin = "http://localhost",
+  fetchAsset = async () => new Response("Not found", { status: 404 }),
+) {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${path}`);
   const { default: worker } = await import(workerUrl.href);
@@ -16,7 +21,7 @@ async function render(path = "/", headers = {}, origin = "http://localhost") {
     }),
     {
       ASSETS: {
-        fetch: async () => new Response("Not found", { status: 404 }),
+        fetch: fetchAsset,
       },
     },
     {
@@ -123,7 +128,14 @@ test("publishes production robots and sitemap routes", async () => {
 });
 
 test("returns 404 instead of a locale redirect for a missing static asset", async () => {
-  const response = await render("/favicon%202.svg");
+  const response = await render(
+    "/favicon%202.svg",
+    {},
+    undefined,
+    async () => {
+      throw new Error("asset is absent from the Workers manifest");
+    },
+  );
 
   assert.equal(response.status, 404);
   assert.equal(response.headers.get("location"), null);

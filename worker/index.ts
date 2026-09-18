@@ -41,7 +41,12 @@ const worker = {
     // asset (for example a stale filename) to `/en`. Ask the asset manifest
     // first so an absent static resource has the expected 404 response.
     if (isStaticAssetPath(url.pathname)) {
-      return env.ASSETS.fetch(request);
+      try {
+        return await env.ASSETS.fetch(request);
+      } catch {
+        // Workers Assets throws for a path that is absent from its manifest.
+        return new Response("Not found", { status: 404 });
+      }
     }
 
     const response = await handler.fetch(request, env, ctx);
