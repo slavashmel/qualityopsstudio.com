@@ -36,6 +36,7 @@ is the `qualityopsstudio-preview.*.workers.dev` preview URL.
 2. Check `/`, `/en`, `/ru`, `/sr`, `/robots.txt`, `/sitemap.xml`, and
    `/favicon.svg` on the preview URL. Confirm locale redirects for both an
    `Accept-Language` header and a `NEXT_LOCALE` cookie.
+   Confirm a nonexistent static asset returns 404 rather than a locale redirect.
 3. Confirm the preview is SSR-rendered, its language switcher persists the
    cookie, its mailto CTA is intact, and browser console errors are absent.
 4. Compare headers, canonical links, TLS, redirects, apex and `www` behavior

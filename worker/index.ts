@@ -17,6 +17,12 @@ function isPreviewHostname(hostname: string): boolean {
   );
 }
 
+function isStaticAssetPath(pathname: string): boolean {
+  return /\.(?:avif|css|gif|ico|jpe?g|js|map|png|svg|webp|woff2?)$/i.test(
+    pathname,
+  );
+}
+
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
@@ -29,6 +35,13 @@ const worker = {
       return new Response("User-agent: *\nDisallow: /\n", {
         headers: { "content-type": "text/plain; charset=utf-8" },
       });
+    }
+
+    // Vinext's dynamic `/:locale` route would otherwise redirect a missing
+    // asset (for example a stale filename) to `/en`. Ask the asset manifest
+    // first so an absent static resource has the expected 404 response.
+    if (isStaticAssetPath(url.pathname)) {
+      return env.ASSETS.fetch(request);
     }
 
     const response = await handler.fetch(request, env, ctx);

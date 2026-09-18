@@ -122,6 +122,13 @@ test("publishes production robots and sitemap routes", async () => {
   );
 });
 
+test("returns 404 instead of a locale redirect for a missing static asset", async () => {
+  const response = await render("/favicon%202.svg");
+
+  assert.equal(response.status, 404);
+  assert.equal(response.headers.get("location"), null);
+});
+
 test("keeps i18n structure explicit in source", async () => {
   const [rootPage, localePage, i18n] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
