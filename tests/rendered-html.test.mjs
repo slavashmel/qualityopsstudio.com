@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-async function render(path = "/", headers = {}) {
+async function render(path = "/", headers = {}, origin = "http://localhost") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${path}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request(`http://localhost${path}`, {
+    new Request(`${origin}${path}`, {
       headers: {
         accept: "text/html",
         ...headers,
@@ -88,6 +88,38 @@ test("preserves https redirects behind the production proxy", async () => {
 
   assert.equal(response.status, 307);
   assert.equal(response.headers.get("location"), "https://qualityopsstudio.com/sr");
+});
+
+test("keeps the workers.dev preview out of search results", async () => {
+  const previewOrigin =
+    "https://qualityopsstudio-preview.example-account.workers.dev";
+  const [pageResponse, robotsResponse] = await Promise.all([
+    render("/en", {}, previewOrigin),
+    render("/robots.txt", {}, previewOrigin),
+  ]);
+
+  assert.equal(pageResponse.status, 200);
+  assert.equal(
+    pageResponse.headers.get("x-robots-tag"),
+    "noindex, nofollow, noarchive",
+  );
+  assert.equal(robotsResponse.status, 200);
+  assert.match(await robotsResponse.text(), /Disallow: \/$/m);
+});
+
+test("publishes production robots and sitemap routes", async () => {
+  const [robotsResponse, sitemapResponse] = await Promise.all([
+    render("/robots.txt"),
+    render("/sitemap.xml"),
+  ]);
+
+  assert.equal(robotsResponse.status, 200);
+  assert.match(await robotsResponse.text(), /Allow: \/$/m);
+  assert.equal(sitemapResponse.status, 200);
+  assert.match(
+    await sitemapResponse.text(),
+    /https:\/\/qualityopsstudio\.com\/en/,
+  );
 });
 
 test("keeps i18n structure explicit in source", async () => {
