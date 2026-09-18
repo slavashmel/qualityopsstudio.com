@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/app/components/LanguageSwitcher";
 import {
   defaultLocale,
@@ -56,7 +56,7 @@ export default async function LocaleHome({ params }: LocalePageProps) {
   const { locale: rawLocale } = await params;
 
   if (!isLocale(rawLocale)) {
-    redirect(`/${defaultLocale}`);
+    notFound();
   }
 
   const locale = rawLocale;
