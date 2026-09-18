@@ -2,15 +2,19 @@
 
 ## Preview deployment
 
-The temporary Worker is intentionally separate from production:
+The temporary Worker is intentionally separate from production. Always deploy
+from a detached clean worktree, never from this potentially dirty Career
+checkout:
 
 ```bash
-CI=true pnpm run preview:deploy
+CI=true pnpm run preview:deploy:clean
 ```
 
-It deploys the Vinext build artifact at `dist/server/wrangler.json` with the
-name `qualityopsstudio-preview`. Do not add a Worker route, custom domain, or
-DNS record as part of preview work. The Worker applies `X-Robots-Tag: noindex,
+The command creates a temporary detached worktree from `HEAD`, restores
+dependencies from the frozen lockfile, and deploys the Vinext artifact at
+`dist/server/wrangler.json` as `qualityopsstudio-preview`. It then removes only
+that temporary worktree. Do not add a Worker route, custom domain, or DNS
+record as part of preview work. The Worker applies `X-Robots-Tag: noindex,
 nofollow, noarchive` and returns a disallowing `robots.txt` only when the host
 is the `qualityopsstudio-preview.*.workers.dev` preview URL.
 
